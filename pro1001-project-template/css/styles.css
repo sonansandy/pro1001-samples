@@ -1,16 +1,92 @@
-html,
-body {
+/* 1. Basic reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: sans-serif;
-    background: #f4f7fa;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
+/* 2. Design tokens from Figma */
+:root {
+    /* Colors from the style guide */
+    --color-bg-primary: #f7f2de;
+    /* Primary background */
+    --color-bg-secondary: #ffffff;
+    /* Secondary background + cards */
+    --color-text-main: #060a08;
+    /* Text & interface */
+    --color-text-invert: #ffffff;
+
+    --color-red: #dc4131;
+    /* Buttons default */
+    --color-red-hover: #ae2e21;
+    /* Button hover */
+    --color-blue-light: #e1eaf9;
+    /* "Lys blå" */
+    --color-green: #008f51;
+    /* "Grønn" */
+
+    /* Typography – font families */
+    --font-logo: "Frank Ruhl Libre", serif;
+    --font-heading: "Arimo", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: "Arimo", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Mobile font sizes (default) */
+    --fs-logo-mobile: 75px;
+    --fs-header-mobile: 24px;
+    --fs-subheader-mobile: 18px;
+    --fs-accent-mobile: 16px;
+    --fs-body-mobile: 16px;
+    --fs-body-large-mobile: 18px;
+
+    /* Desktop font sizes – we’ll apply these with a media query */
+    --fs-logo-desktop: 200px;
+    --fs-header-desktop: 36px;
+    --fs-subheader-desktop: 20px;
+    --fs-accent-desktop: 20px;
+    --fs-body-desktop: 16px;
+    --fs-body-large-desktop: 20px;
+
+    /* Layout helpers */
+    --page-max-width: 1200px;
+    --page-padding-x: 1.5rem;
+    --page-padding-y: 2rem;
+
+    /* Misc */
+    --radius-pill: 999px;
+    --transition-fast: 150ms ease-out;
+}
+
+/* 3. Global page defaults */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-main);
+    line-height: 1.5;
+}
+
+/* Center the content and give it some breathing room */
+main {
+    max-width: var(--page-max-width);
+    margin: 0 auto;
+    padding: var(--page-padding-y) var(--page-padding-x);
+}
+
+/* Simple test styles, we’ll replace with proper components later */
 h1 {
-    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: var(--fs-header-mobile);
+}
+
+/* 4. Switch to desktop font sizes at a breakpoint */
+@media (min-width: 768px) {
+    h1 {
+        font-size: var(--fs-header-desktop);
+    }
 }
