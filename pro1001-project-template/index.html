@@ -36,10 +36,9 @@
     </header>
 
     <!-- Overlay navigation -->
-    <nav class="overlay-nav" aria-label="Main navigation">
+    <nav class="nav-overlay" aria-label="Main navigation">
         <div class="overlay-nav__top">
             <label for="nav-toggle" class="overlay-nav__close" aria-label="Close menu">×</label>
-            <span class="overlay-nav__logo">FRAM</span>
         </div>
         <div class="overlay-nav__links">
             <a href="products.html" class="overlay-nav__link">Products</a>
@@ -57,16 +56,21 @@
                 <h1 class="hero__title">FRAM</h1>
                 <span class="hero__divider" aria-hidden="true"></span>
                 <p class="hero__subtitle">
-                    Home delivery from your local farms
+                    Home delivery from
+                </p>
+                <p class="hero__subtitle">
+                    your local farms
                 </p>
             </div>
         </section>
 
         <!-- SEASONAL SELECTION + ASK US -->
-        <section class="section section--cards">
+        <section class="section--cards">
             <article class="info-card">
-                <h2 class="info-card__title">Shop our seasonal selection</h2>
-                <p class="info-card__eyebrow">Updated every week</p>
+                <div class="info-card-title-container">
+                    <h2 class="info-card__title">Shop our seasonal<br>selection</h2>
+                    <p class="info-card__eyebrow">Updated every week</p>
+                </div>
                 <figure class="info-card__image-wrapper">
                     <img src="images/shop-selection.png" alt="Basket of fresh seasonal vegetables"
                         class="info-card__image" />
@@ -78,8 +82,10 @@
             </article>
 
             <article class="info-card">
-                <h2 class="info-card__title">Ask us about anything</h2>
-                <p class="info-card__eyebrow">All your questions answered</p>
+                <div class="info-card-title-container">
+                    <h2 class="info-card__title">Ask us about<br>anything</h2>
+                    <p class="info-card__eyebrow">All your questions answered</p>
+                </div>
                 <figure class="info-card__image-wrapper">
                     <img src="images/go-to-chat.png" alt="Farmer pointing across a field" class="info-card__image" />
                 </figure>
@@ -99,42 +105,53 @@
             <div class="how-it-works__steps">
                 <article class="how-step">
                     <h3 class="how-step__title">Order groceries</h3>
-                    <p class="how-step__text">
-                        Fram is a circular service that ensures your kitchen is always stocked with the essentials you
-                        need. Browse our seasonal selection, choose your items, and place your order online.
-                    </p>
-                    <a href="products.html" class="how-step__link">See our stock here</a>
+                    <div class="how-step__content">
+                        <p class="how-step__text">
+                            Fram is a circular service that ensures your kitchen is always stocked with the essentials
+                            you
+                            need. Browse our seasonal selection, choose your items, and place your order online.
+                        </p>
+                        <a href="products.html" class="how-step__link">See our stock here</a>
+                    </div>
                 </article>
 
                 <article class="how-step">
                     <h3 class="how-step__title">Stock up</h3>
-                    <p class="how-step__text">
-                        Once your order arrives, unpack the produce and store it however it works best for you. Hold
-                        onto the containers—they're yours to keep until your next order.
-                    </p>
+                    <div class="how-step__content">
+                        <p class="how-step__text">
+                            Once your order arrives, unpack the produce and store it however it works best for you. Hold
+                            onto the containers—they're yours to keep until your next order.
+                        </p>
+                    </div>
                 </article>
 
                 <article class="how-step">
                     <h3 class="how-step__title">Scan &amp; reorder</h3>
-                    <p class="how-step__text">
-                        Ready for a refill? Grab the containers from your last order and scan the QR code with our app
-                        or your phone's camera. This instantly adds the items back to your cart, making reordering a
-                        breeze.
-                    </p>
+                    <div class="how-step__content">
+                        <p class="how-step__text">
+                            Ready for a refill? Grab the containers from your last order and scan the QR code with our
+                            app
+                            or your phone's camera. This instantly adds the items back to your cart, making reordering a
+                            breeze.
+                        </p>
+                    </div>
                 </article>
 
                 <article class="how-step">
                     <h3 class="how-step__title">Swap &amp; reuse</h3>
-                    <p class="how-step__text">
-                        When we deliver your new order, simply leave your empty containers outside. We'll pick them up,
-                        clean them thoroughly, and reuse them for future deliveries.
-                    </p>
+                    <div class="how-step__content">
+                        <p class="how-step__text">
+                            When we deliver your new order, simply leave your empty containers outside. We'll pick them
+                            up,
+                            clean them thoroughly, and reuse them for future deliveries.
+                        </p>
+                    </div>
                 </article>
             </div>
         </section>
 
         <!-- POPULAR PRODUCE -->
-        <section class="section section--popular">
+        <section class="section--popular">
             <h2 class="section__heading">Popular produce</h2>
 
             <div class="product-grid">
@@ -143,9 +160,13 @@
                         <img src="images/oats.png" alt="Close-up of oats" class="product-card__image" />
                         <button class="product-card__badge">Add to basket →</button>
                     </figure>
-                    <h3 class="product-card__name">Oats</h3>
-                    <p class="product-card__meta">1 kg</p>
-                    <p class="product-card__price">48 kr / kg</p>
+                    <div class="product-card__info">
+                        <div class="product-card__text">
+                            <h3 class="product-card__name">Oats</h3>
+                            <p class="product-card__meta">1 kg</p>
+                        </div>
+                        <p class="product-card__price">48 kr / kg</p>
+                    </div>
                 </article>
 
                 <article class="product-card">
@@ -153,9 +174,13 @@
                         <img src="images/red-onions.png" alt="Red onions" class="product-card__image" />
                         <button class="product-card__badge">Add to basket →</button>
                     </figure>
-                    <h3 class="product-card__name">Red onions</h3>
-                    <p class="product-card__meta">0.5 kg</p>
-                    <p class="product-card__price">48 kr / kg</p>
+                    <div class="product-card__info">
+                        <div class="product-card__text">
+                            <h3 class="product-card__name">Red onions</h3>
+                            <p class="product-card__meta">0.5 kg</p>
+                        </div>
+                        <p class="product-card__price">48 kr / kg</p>
+                    </div>
                 </article>
 
                 <article class="product-card">
@@ -163,9 +188,13 @@
                         <img src="images/garlic.png" alt="Garlic bulbs" class="product-card__image" />
                         <button class="product-card__badge">Add to basket →</button>
                     </figure>
-                    <h3 class="product-card__name">Garlic</h3>
-                    <p class="product-card__meta">0.2 kg</p>
-                    <p class="product-card__price">48 kr / kg</p>
+                    <div class="product-card__info">
+                        <div class="product-card__text">
+                            <h3 class="product-card__name">Garlic</h3>
+                            <p class="product-card__meta">0.2 kg</p>
+                        </div>
+                        <p class="product-card__price">48 kr / kg</p>
+                    </div>
                 </article>
             </div>
         </section>
@@ -183,21 +212,17 @@
                 <form class="newsletter__form">
                     <label class="newsletter__field">
                         <span class="newsletter__label">First name</span>
-                        <input type="text" name="first-name" />
+                        <input type="text" name="first-name" placeholder="First name" />
                     </label>
 
                     <label class="newsletter__field">
                         <span class="newsletter__label">E-mail address</span>
-                        <input type="email" name="email" />
-                    </label>
-
-                    <label class="newsletter__field">
-                        <span class="newsletter__label">Message (optional)</span>
-                        <input type="text" name="message" />
+                        <input type="email" name="email" placeholder="E-mail address" />
                     </label>
 
                     <button type="submit" class="btn btn--secondary">Send</button>
                 </form>
+
             </section>
         </footer>
     </main>
