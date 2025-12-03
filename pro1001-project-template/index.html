@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Fram – Home delivery from your local farms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Arimo:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- Mobile menu toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <label for="nav-toggle" class="site-header__icon site-header__icon--menu" aria-label="Open menu">
+                ☰
+            </label>
+
+            <a href="index.html" class="site-header__logo">FRAM</a>
+
+            <a href="checkout.html" class="site-header__icon site-header__icon--cart" aria-label="Go to checkout">
+                <!-- small green circle with number inside -->
+                <span class="cart-badge">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Overlay navigation -->
+<nav class="nav-overlay" aria-label="Main navigation">
+  <div class="overlay-nav__top">
+    <label for="nav-toggle" class="overlay-nav__close" aria-label="Close menu">×</label>
+    <span class="overlay-nav__logo">FRAM</span>
+    <span class="overlay-nav__spacer"></span>
+  </div>
+
+  <div class="overlay-nav__links">
+    <a href="products.html" class="overlay-nav__link">Products</a>
+    <a href="chat.html" class="overlay-nav__link">Chat</a>
+    <a href="checkout.html" class="overlay-nav__link overlay-nav__link--bottom">Checkout</a>
+  </div>
+</nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero__image" role="img" aria-label="Mountain landscape with fields and farms"></div>
+
+            <div class="hero__content">
+                <h1 class="hero__title">FRAM</h1>
+                <span class="hero__divider" aria-hidden="true"></span>
+                <p class="hero__subtitle">
+                    Home delivery from
+                    your local farms
+                </p>
+            </div>
+        </section>
+
+        <!-- SEASONAL SELECTION + ASK US -->
+        <section class="section--cards">
+            <article class="info-card">
+                <div class="info-card-title-container">
+                    <h2 class="info-card__title">Shop our seasonal<br>selection</h2>
+                    <p class="info-card__eyebrow">Updated every week</p>
+                </div>
+                <figure class="info-card__image-wrapper">
+                    <img src="images/shop-selection.png" alt="Basket of fresh seasonal vegetables"
+                        class="info-card__image" />
+                </figure>
+                <p class="info-card__text">
+                    New produce is added continuously as time goes by and the seasons change.
+                </p>
+                <a href="products.html" class="btn btn--primary">Browse our selection</a>
+            </article>
+
+            <article class="info-card">
+                <div class="info-card-title-container">
+                    <h2 class="info-card__title">Ask us about<br>anything</h2>
+                    <p class="info-card__eyebrow">All your questions answered</p>
+                </div>
+                <figure class="info-card__image-wrapper">
+                    <img src="images/go-to-chat.png" alt="Farmer pointing across a field" class="info-card__image" />
+                </figure>
+                <p class="info-card__text">
+                    New produce is added continuously as time goes by and the seasons change.
+                </p>
+                <a href="chat.html" class="btn btn--primary">Go to chat</a>
+            </article>
+        </section>
+
+        <!-- THIS IS HOW IT WORKS -->
+        <section class="section section--how-it-works">
+            <div class="how-it-works__intro">
+                <h2 class="how-it-works__title">This is how it works</h2>
+            </div>
+
+            <div class="how-it-works__steps">
+                <article class="how-step">
+                    <h3 class="how-step__title">Order groceries</h3>
+                    <div class="how-step__content">
+                        <p class="how-step__text">
+                            Fram is a circular service that ensures your kitchen is always stocked with the essentials
+                            you
+                            need. Browse our seasonal selection, choose your items, and place your order online.
+                        </p>
+                        <a href="products.html" class="how-step__link">See our stock here</a>
+                    </div>
+                </article>
+
+                <article class="how-step">
+                    <h3 class="how-step__title">Stock up</h3>
+                    <div class="how-step__content">
+                        <p class="how-step__text">
+                            Once your order arrives, unpack the produce and store it however it works best for you. Hold
+                            onto the containers—they're yours to keep until your next order.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="how-step">
+                    <h3 class="how-step__title">Scan &amp; reorder</h3>
+                    <div class="how-step__content">
+                        <p class="how-step__text">
+                            Ready for a refill? Grab the containers from your last order and scan the QR code with our
+                            app
+                            or your phone's camera. This instantly adds the items back to your cart, making reordering a
+                            breeze.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="how-step">
+                    <h3 class="how-step__title">Swap &amp; reuse</h3>
+                    <div class="how-step__content">
+                        <p class="how-step__text">
+                            When we deliver your new order, simply leave your empty containers outside. We'll pick them
+                            up,
+                            clean them thoroughly, and reuse them for future deliveries.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- POPULAR PRODUCE -->
+        <section class="section--popular">
+            <h2 class="section__heading">Popular produce</h2>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <figure class="product-card__image-wrapper">
+                        <img src="images/oats.png" alt="Close-up of oats" class="product-card__image" />
+                        <button class="product-card__badge">
+                            Add to basket <i class="fa-solid fa-arrow-up"></i>
+                        </button>
+                    </figure>
+                    <div class="product-card__info">
+                        <div class="product-card__text">
+                            <h3 class="product-card__name">Oats</h3>
+                            <p class="product-card__meta">1 kg</p>
+                        </div>
+                        <p class="product-card__price">48 kr / kg</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <figure class="product-card__image-wrapper">
+                        <img src="images/red-onions.png" alt="Red onions" class="product-card__image" />
+                        <button class="product-card__badge">
+                            Add to basket <i class="fa-solid fa-arrow-up"></i>
+                        </button>
+                    </figure>
+                    <div class="product-card__info">
+                        <div class="product-card__text">
+                            <h3 class="product-card__name">Red onions</h3>
+                            <p class="product-card__meta">0.5 kg</p>
+                        </div>
+                        <p class="product-card__price">48 kr / kg</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <figure class="product-card__image-wrapper">
+                        <img src="images/garlic.png" alt="Garlic bulbs" class="product-card__image" />
+                        <button class="product-card__badge">
+                            Add to basket <i class="fa-solid fa-arrow-up"></i>
+                        </button>
+                    </figure>
+                    <div class="product-card__info">
+                        <div class="product-card__text">
+                            <h3 class="product-card__name">Garlic</h3>
+                            <p class="product-card__meta">0.2 kg</p>
+                        </div>
+                        <p class="product-card__price">48 kr / kg</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FOOTER / NEWSLETTER -->
+        <footer class="site-footer">
+            <section class="newsletter">
+                <h2 class="newsletter__logo">FRAM</h2>
+                <h3 class="newsletter__title">Stay updated</h3>
+                <p class="newsletter__text">
+                    Sign up for our newsletter to be the first to know about new produce or other exciting news!
+                </p>
+
+                <form class="newsletter__form">
+                    <label class="newsletter__field">
+                        <span class="newsletter__label">First name</span>
+                        <input type="text" name="first-name" placeholder="First name" />
+                    </label>
+
+                    <label class="newsletter__field">
+                        <span class="newsletter__label">E-mail address</span>
+                        <input type="email" name="email" placeholder="E-mail address" />
+                    </label>
+
+                    <button type="submit" class="btn btn--secondary">Send</button>
+                </form>
+
+            </section>
+        </footer>
+    </main>
+</body>
+
+</html>

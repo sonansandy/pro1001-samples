@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Fram – Produce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Arimo:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Google Maps API -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2OBq0cYtWzlwZSQCiKTDzQ4X2Bkgp6GQ&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+</head>
+
+<body>
+  <!-- Mobile menu toggle (CSS-only) -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <label for="nav-toggle" class="site-header__icon site-header__icon--menu" aria-label="Open menu">
+        ☰
+      </label>
+
+      <a href="index.html" class="site-header__logo">FRAM</a>
+
+      <a href="checkout.html" class="site-header__icon site-header__icon--cart" aria-label="Go to checkout">
+        <span class="cart-badge">0</span>
+      </a>
+    </div>
+  </header>
+
+<nav class="nav-overlay" aria-label="Main navigation">
+  <div class="overlay-nav__top">
+    <label for="nav-toggle" class="overlay-nav__close" aria-label="Close menu">×</label>
+    <span class="overlay-nav__logo">FRAM</span>
+    <span class="overlay-nav__spacer"></span>
+  </div>
+  <div class="overlay-nav__links">
+    <a href="products.html" class="overlay-nav__link">Products</a>
+    <a href="chat.html" class="overlay-nav__link">Chat</a>
+    <a href="checkout.html" class="overlay-nav__link overlay-nav__link--bottom">Checkout</a>
+  </div>
+</nav>
+
+  <main>
+    <!-- PRODUCE INTRO -->
+    <section class="products-intro">
+      <h1 class="products-intro__title">Produce</h1>
+      <p class="products-intro__text">
+        Explore our selection of seasonal produce, sourced directly from local farms to ensure peak
+        freshness and quality. Every item is chosen with care, supporting sustainable practices and
+        bringing the best of the harvest to your table.
+      </p>
+    </section>
+
+    <!-- PRODUCT LIST -->
+    <section class="products-list">
+      <article class="product-card product-card--stacked">
+        <figure class="product-card__image-wrapper">
+          <img src="images/oats.png" alt="Close-up of oats" class="product-card__image" />
+          <button class="product-card__badge">
+            Add to basket <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </figure>
+        <div class="product-card__info">
+          <div class="product-card__text">
+            <h2 class="product-card__name">Oats</h2>
+            <p class="product-card__meta">1 kg</p>
+          </div>
+          <p class="product-card__price">16 kr / kg</p>
+        </div>
+      </article>
+
+      <article class="product-card product-card--stacked">
+        <figure class="product-card__image-wrapper">
+          <img src="images/red-onions.png" alt="Red onions" class="product-card__image" />
+          <button class="product-card__badge">
+            Add to basket <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </figure>
+        <div class="product-card__info">
+          <div class="product-card__text">
+            <h2 class="product-card__name">Red onions</h2>
+            <p class="product-card__meta">0.5 kg</p>
+          </div>
+          <p class="product-card__price">45 kr / kg</p>
+        </div>
+      </article>
+
+      <article class="product-card product-card--stacked">
+        <figure class="product-card__image-wrapper">
+          <img src="images/garlic.png" alt="Garlic bulbs" class="product-card__image" />
+          <button class="product-card__badge">
+            Add to basket <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </figure>
+        <div class="product-card__info">
+          <div class="product-card__text">
+            <h2 class="product-card__name">Garlic</h2>
+            <p class="product-card__meta">0.2 kg</p>
+          </div>
+          <p class="product-card__price">38 kr</p>
+        </div>
+      </article>
+
+      <article class="product-card product-card--stacked">
+        <figure class="product-card__image-wrapper">
+          <img src="images/potatoes.png" alt="Potatoes" class="product-card__image" />
+          <button class="product-card__badge">
+            Add to basket <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </figure>
+        <div class="product-card__info">
+          <div class="product-card__text">
+            <h2 class="product-card__name">Potatoes</h2>
+            <p class="product-card__meta">1 kg</p>
+          </div>
+          <p class="product-card__price">32 kr / kg</p>
+        </div>
+      </article>
+
+      <article class="product-card product-card--stacked">
+        <figure class="product-card__image-wrapper">
+          <img src="images/carrots.png" alt="Carrots" class="product-card__image" />
+          <button class="product-card__badge">
+            Add to basket <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </figure>
+        <div class="product-card__info">
+          <div class="product-card__text">
+            <h2 class="product-card__name">Carrots</h2>
+            <p class="product-card__meta">Gård</p>
+          </div>
+          <p class="product-card__price">48 kr / kg</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- PARTNER FARMS / MAP -->
+   <section class="partner-farms">
+  <h2 class="partner-farms__title">See our partnering farms</h2>
+  <div class="partner-farms__map-wrapper">
+    <gmp-map center="60.27885,10.61964" zoom="14" map-id="DEMO_MAP_ID">
+      <gmp-advanced-marker
+        position="60.27885,10.61964"
+        title="Braastad Gaard">
+      </gmp-advanced-marker>
+    </gmp-map>
+  </div>
+</section>
+
+    <!-- FOOTER / NEWSLETTER -->
+    <footer class="site-footer">
+      <section class="newsletter">
+        <h2 class="newsletter__logo">FRAM</h2>
+        <h3 class="newsletter__title">Stay updated</h3>
+        <p class="newsletter__text">
+          Sign up for our newsletter to be the first to know about new produce or other exciting news!
+        </p>
+
+        <form class="newsletter__form">
+          <label class="newsletter__field">
+            <span class="newsletter__label">First name</span>
+            <input type="text" name="first-name" placeholder="First name" />
+          </label>
+
+          <label class="newsletter__field">
+            <span class="newsletter__label">E-mail address</span>
+            <input type="email" name="email" placeholder="E-mail address" />
+          </label>
+
+          <button type="submit" class="btn btn--secondary">Send</button>
+        </form>
+      </section>
+    </footer>
+  </main>
+</body>
+
+</html>
