@@ -6,22 +6,16 @@
   <title>Fram – Produce</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Arimo:wght@300;400;500;700&display=swap"
     rel="stylesheet" />
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Google Maps API -->
-  <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2OBq0cYtWzlwZSQCiKTDzQ4X2Bkgp6GQ&callback=console.debug&libraries=maps,marker&v=beta">
-    </script>
+  <script type="module" src="js/maps-gmp.js"></script>
+  <script defer src="js/newsletter.js"></script>
+  
+  <script src="js/newsletter.js"></script>
 </head>
 
 <body>
@@ -150,16 +144,21 @@
     </section>
 
     <!-- PARTNER FARMS / MAP -->
-   <section class="partner-farms">
+   <section class="partner-title">
   <h2 class="partner-farms__title">See our partnering farms</h2>
+</section>
+
+<section class="partner-farms">
   <div class="partner-farms__map-wrapper">
-    <gmp-map center="60.27885,10.61964" zoom="14" map-id="DEMO_MAP_ID">
+    <gmp-map id="partner-map" center="60.27885,10.61964" zoom="14">
       <gmp-advanced-marker
         position="60.27885,10.61964"
         title="Braastad Gaard">
       </gmp-advanced-marker>
     </gmp-map>
   </div>
+
+  <p id="map-status" class="map-status" aria-live="polite">Loading map…</p>
 </section>
 
     <!-- FOOTER / NEWSLETTER -->
@@ -171,19 +170,38 @@
           Sign up for our newsletter to be the first to know about new produce or other exciting news!
         </p>
 
-        <form class="newsletter__form">
-          <label class="newsletter__field">
-            <span class="newsletter__label">First name</span>
-            <input type="text" name="first-name" placeholder="First name" />
-          </label>
+        <form class="newsletter__form" id="newsletter-form" novalidate>
+  <div class="newsletter__field">
+    <label class="newsletter__label" for="first-name">First name</label>
+    <input
+      id="first-name"
+      type="text"
+      name="first-name"
+      placeholder="First name"
+      required
+      aria-required="true"
+    />
+  </div>
 
-          <label class="newsletter__field">
-            <span class="newsletter__label">E-mail address</span>
-            <input type="email" name="email" placeholder="E-mail address" />
-          </label>
+  <div class="newsletter__field">
+    <label class="newsletter__label" for="email">E-mail address</label>
+    <input
+      id="email"
+      type="email"
+      name="email"
+      placeholder="E-mail address"
+      required
+      aria-required="true"
+    />
+  </div>
 
-          <button type="submit" class="btn btn--secondary">Send</button>
-        </form>
+  <button type="submit" class="btn btn--secondary">
+    Send
+  </button>
+
+  <!-- Feedback -->
+  <p class="form-feedback" id="newsletter-feedback" aria-live="polite" role="status"></p>
+</form>
       </section>
     </footer>
   </main>
