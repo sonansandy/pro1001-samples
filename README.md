@@ -84,7 +84,7 @@ project-root/
 
 ### Clone the repository
 
-git clone https://github.com/your-username/fram-webshop.git
+git clone https://github.com/sonansandy/pro1001-samples/tree/main
 
 
 ### Open locally
